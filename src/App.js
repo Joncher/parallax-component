@@ -19,8 +19,9 @@ export default class App extends Component {
       <div>
         {/*Image 1*/}
         <Parallax
+          blur={1}
           bgImage={require("./photos/bloom-blooming-blossom-462118.jpg")}
-          strength={1}
+          strength={50}
         >
           <Container style={{ height: window.innerHeight }}>
             <div id={"header"} style={insideStyles}>
@@ -43,6 +44,7 @@ export default class App extends Component {
 
         {/*Image 3*/}
         <Parallax
+          blur={8}
           bgImage={require("./photos/beautiful-beautiful-flowers-bloom-757889.jpg")}
           strength={1500}
         >
