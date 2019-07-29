@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Parallax } from "react-parallax";
+import { Container } from "semantic-ui-react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+const insideStyles = {
+  background: "rgb(128,128,128,0.3)",
+  padding: 20,
+  position: "absolute",
+  top: "45%",
+  left: "50%",
+  transform: "translate(-50%,-50%)"
+};
+export default class App extends Component {
+  render() {
+    console.log(this.props.image);
+    return (
+      <div id={"background"}>
+        <Parallax
+          bgImage={require("./photos/daylight-environment-forest-459225.jpg")}
+          strength={750}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          <Container style={{ height: window.innerHeight }}>
+            <div id={"header"} style={insideStyles}>
+              <h1 id={"header"}>{"Welcome to PCC"}</h1>
+            </div>
+          </Container>
+        </Parallax>
+        <Parallax strength={500}>
+          <Container style={{ height: window.innerHeight }}>
+            <div id={"header"} style={insideStyles}>
+              <h1 id={"header"}>{"Welcome to PCC"}</h1>
+            </div>
+          </Container>
+        </Parallax>
+        <Parallax
+          bgImage={require("./photos/daylight-environment-forest-459225.jpg")}
+          strength={1500}
+        >
+          <Container style={{ height: window.innerHeight }}>
+            <div id={"header"} style={insideStyles}>
+              <h1 id={"header"}>{"Welcome to PCC"}</h1>
+            </div>
+          </Container>
+        </Parallax>
+      </div>
+    );
+  }
 }
-
-export default App;
