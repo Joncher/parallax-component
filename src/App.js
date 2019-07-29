@@ -17,16 +17,10 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        {/*Spacer*/}
-        <Container style={{ height: window.innerHeight }}>
-          <div id={"header"} style={insideStyles}>
-            <h1 id={"header"}>{"Blank Space"}</h1>
-          </div>
-        </Container>
         {/*Image 1*/}
         <Parallax
-          bgImage={require("./photos/daylight-environment-forest-459225.jpg")}
-          strength={750}
+          bgImage={require("./photos/bloom-blooming-blossom-462118.jpg")}
+          strength={1}
         >
           <Container style={{ height: window.innerHeight }}>
             <div id={"header"} style={insideStyles}>
@@ -34,20 +28,39 @@ export default class App extends Component {
             </div>
           </Container>
         </Parallax>
-        {/*Spacer*/}
-        <Container style={{ height: window.innerHeight }}>
-          <div id={"header"} style={insideStyles}>
-            <h1 id={"header"}>{"Blank Space"}</h1>
-          </div>
-        </Container>
+
         {/*Image 2*/}
         <Parallax
-          bgImage={require("./photos/asphalt-dark-dawn-531321.jpg")}
-          strength={1500}
+          bgImage={require("./photos/daylight-environment-forest-459225.jpg")}
+          strength={750}
         >
           <Container style={{ height: window.innerHeight }}>
             <div id={"header"} style={insideStyles}>
               <h1 id={"header"}>{"Image 2"}</h1>
+            </div>
+          </Container>
+        </Parallax>
+
+        {/*Image 3*/}
+        <Parallax
+          bgImage={require("./photos/beautiful-beautiful-flowers-bloom-757889.jpg")}
+          strength={1500}
+        >
+          <Container style={{ height: window.innerHeight }}>
+            <div id={"header"} style={insideStyles}>
+              <h1 id={"header"}>{"Image 3"}</h1>
+            </div>
+          </Container>
+        </Parallax>
+
+        {/*Image 4*/}
+        <Parallax
+          bgImage={require("./photos/asphalt-dark-dawn-531321.jpg")}
+          strength={3000}
+        >
+          <Container style={{ height: window.innerHeight }}>
+            <div id={"header"} style={insideStyles}>
+              <h1 id={"header"}>{"Image 4"}</h1>
             </div>
           </Container>
         </Parallax>
